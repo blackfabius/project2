@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Zahlenraten</title>
+<p id="auswahl1"></p>
+<p id="auswahl2"></p>
+<script>
+var test = 0;
+var time = 0;
+var trys = 0;
+
+function math(calc){
+if (calc == 1) {
+	var test = 1
+}
+}
+function mode(){
+
+}
+document.getElementById("auswahl2").innerHTML = test;
+</script>
+</head>
+<body>
+<h1> Test </h1>
+	<form action="select.html">
+		<label>
+			<select name="calc" size="4" onchange="math(this.value)">
+				<option value="1">+</option>
+				<option value="2">-</option>
+				<option value="3">:</option>
+				<option value="4">*</option>
+			</select>
+		</label>
+		<label>
+			<select name="mode" size="3" onchange="mode(this.value)">
+				<option value="1">EINFACH</option>
+				<option value="2">NORMAL</option>
+				<option value="3">SCHWER</option>
+			</select>
+		</label>
+	</form>
+</body>
+</html>
