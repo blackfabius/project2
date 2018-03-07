@@ -3,62 +3,35 @@
 <title>Zahlenraten</title>
 <p id="auswahl1"></p>
 <p id="auswahl2"></p>
+<p id="trys"></p>
+<p id="time"></p>
+<button onclick="TIMER()">Try it</button>
 <script>
-//int
+var test = 0;
+var time = 0;
+var trys = 0;
 var zahl1 = 0;
 var zahl2 = 0;
-var mode = 0;
-var min = 0;
-var math = 0;
 
-//auswahl
-function math(min){
-if (min == 1){
-	var calc = 1}
-if (min == 2) {
-	var calc = 2}
-if (min == 3) {
-	var calc = 3}
-if (min == 4) {
-	var calc = 4}
+function math(calc){
+if (calc == 1) {
+	var test = 1
 }
-function mode(mode){
-if (mode == 1){
-	var mode = 1}
-if (mode == 2) {
-	var mode = 2}
-if (mode == 3) {
-	var mode = 3}
 }
-/*rechnen
-function math1(zahl1, zahl2, mode){
-zahl3 = Math.floor((zahl1) + (zahl2))
-}
-function math2(zahl1, zahl2){
-zahl3 = Math.floor((zahl1) - (zahl2))
-}
-function math3(zahl1, zahl2){
-zahl3 = Math.floor((zahl1) / (zahl2))
-}
-function math4(zahl1, zahl2){
-zahl3 = Math.floor((zahl1) * (zahl2))
-}
-
-/*
-function mode1(){
-var zahl1 = Math.floor(Math.random()*100)
-var zahl2 = Math.floor(Math.random()*100)
-}
-function mode2(){
+function mode(){
 
 }
-function mode3(){
 
+function TIMER() {
+    setInterval(function()
+		{var time = time + 1;
+		document.getElementById("time").innerHTML = "Deine Zeit : "+ zeit;}, 1000);
 }
-*/
-//SHOW
-document.getElementById("auswahl1").innerHTML = math;
-document.getElementById("auswahl2").innerHTML = mode;
+
+document.getElementById("auswahl1").innerHTML = "ZAHL1 : "+zahl1;
+document.getElementById("auswahl2").innerHTML = "ZAHL2 : "+zahl2;
+document.getElementById("trys").innerHTML = "Deine Versuche : "+ trys;
+document.getElementById("time").innerHTML = "Deine Zeit : "+ time;
 </script>
 </head>
 <body>
@@ -72,7 +45,6 @@ document.getElementById("auswahl2").innerHTML = mode;
 				<option value="4">*</option>
 			</select>
 		</label>
-	<form action="select.html">
 		<label>
 			<select name="mode" size="3" onchange="mode(this.value)">
 				<option value="1">EINFACH</option>
